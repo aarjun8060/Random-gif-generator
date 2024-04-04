@@ -16,13 +16,15 @@ function Tag(){
         setGifs(imageSource);
         setLoading(false);
     }
-    useEffect( () => {
+
+    useEffect(() => {
         fetchData();
-    },[] ) 
-    function clickHandler(){
+    },[]) 
+
+    // function clickHandler(){
         
-        fetchData();
-    }
+    //     fetchData();
+    // }
     function changeHandler(event){
         setTag(event.target.value)
     }
@@ -35,7 +37,7 @@ function Tag(){
             }
             <input className="w-10/12 text-center font-bold text-lg py-2 rounded-lg mb-[4px]" onChange={changeHandler} value={tag} />
             
-            <button onClick={clickHandler} className="w-10/12 bg-purple-500 text-lg py-2 rounded-lg mb-[20px]">Generate</button>
+            <button onClick={fetchData} className="w-10/12 bg-purple-500 text-lg py-2 rounded-lg mb-[20px]">Generate</button>
         </div>
     );
 
